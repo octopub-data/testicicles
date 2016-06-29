@@ -1,0 +1,29 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dialect": {
+    "encoding": "utf-8"
+  },
+  "tables": [
+    {
+      "url": "people.csv",
+      "tableSchema": {
+        "aboutUrl": "people/{person}",
+        "columns": [
+          {
+            "titles": "person"
+          },
+          {
+            "titles": "age",
+            "name": "age",
+            "datatype": "integer"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "people"
+          }
+        ]
+      }
+    }
+  ]
+}
